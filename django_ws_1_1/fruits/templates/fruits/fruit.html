@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .item {
+        list-style: none;
+    }
+</style>
+<body>
+    <!-- 명세 1번 -->
+    <ul>
+        {% for item in fruit %}
+            {% if item not in hate%}
+                {% if item|length >= 2 %}
+                    <li class="item">{{ item|truncatechars:3}}</li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends "prices/base.html" %}
+
+{% block content %}
+    {% if thing in thing_list %}
+        <p>{{ message }}</p>
+    {% else %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% endblock content %}

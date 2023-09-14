@@ -1,0 +1,13 @@
+ {% extends "calculators/base.html" %}
+      {% block content %}
+      <h1>계산 결과</h1>
+      <h3>{{num1}} + {{num2}} = {{ num1|add:num2 }}</h3>
+      <h3>{{num1}} - {{num2}} = {{sub}}</h3>
+      <h3>{{num1}} * {{num2}} = {{mul}}</h3>
+      <h3>
+        {% if num2 != '0' %} 
+          {{num1}} + {{num2}} = {{ div }}
+        {% else %}
+          {{ div }}
+        {% endif %}</h3>
+    {% endblock content %}
